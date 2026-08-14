@@ -1,0 +1,103 @@
+# Copyright (C) 2026 Geeta Pariwar Nepal
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Geeta Pariwar Nepal CRM 1.0.0\n"
+"Report-Msgid-Bugs-To: https://geetapariwarnepal.org\n"
+"POT-Creation-Date: 2026-08-04 12:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: gpn-crm\n"
+"X-Domain: gpn-crm\n"
+
+#: gpn-crm.php:90
+msgid "Geeta CRM"
+msgstr ""
+
+#: gpn-crm.php:100
+msgid "Dashboard"
+msgstr ""
+
+#: gpn-crm.php:101
+msgid "Sadhaks"
+msgstr ""
+
+#: gpn-crm.php:102
+msgid "Add Sadhak"
+msgstr ""
+
+#: gpn-crm.php:103
+msgid "Groups"
+msgstr ""
+
+#: gpn-crm.php:104
+msgid "Sync"
+msgstr ""
+
+#: gpn-crm.php:105
+msgid "Import"
+msgstr ""
+
+#: gpn-crm.php:106
+msgid "Export"
+msgstr ""
+
+#: gpn-crm.php:107
+msgid "Settings"
+msgstr ""
+
+#: gpn-crm.php:108
+msgid "User Management"
+msgstr ""
+
+#: gpn-crm.php:109
+msgid "Backup"
+msgstr ""
+
+#: gpn-crm.php:135
+msgid "You do not have permission to access this page."
+msgstr ""
+
+#: gpn-crm.php:148,157
+msgid "Permission denied."
+msgstr ""
+
+#: includes/class-gpn-auth.php:145
+msgid "Please enter both username and password."
+msgstr ""
+
+#: includes/class-gpn-auth.php:149
+msgid "Invalid username or password."
+msgstr ""
+
+#: includes/class-gpn-auth.php:161
+msgid "Geeta Pariwar Nepal"
+msgstr ""
+
+#: includes/class-gpn-auth.php:162
+msgid "Sadhak CRM"
+msgstr ""
+
+#: includes/class-gpn-auth.php:178
+msgid "Username"
+msgstr ""
+
+#: includes/class-gpn-auth.php:181
+msgid "Password"
+msgstr ""
+
+#: includes/class-gpn-auth.php:186
+msgid "Login"
+msgstr ""
+
+#: includes/class-gpn-auth.php:187
+msgid "Exit"
+msgstr ""
+
+#: includes/class-gpn-settings.php:28
+msgid "Geeta Pariwar Nepal Sadhak CRM"
+msgstr ""

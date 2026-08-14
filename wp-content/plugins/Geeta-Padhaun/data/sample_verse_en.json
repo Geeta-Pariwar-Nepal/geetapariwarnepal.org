@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "externalId": "BG101",
+    "chapter_id": 1,
+    "chapter_number": 1,
+    "verse_number": 1,
+    "verse_order": 1,
+    "title": "Verse 1",
+    "text": "धृतराष्ट्र उवाच\n\nधर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः।\n\nमामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय।।1.1।।\n ",
+    "transliteration": "dhṛitarāśhtra uvācha\ndharma-kṣhetre kuru-kṣhetre samavetā yuyutsavaḥ\nmāmakāḥ pāṇḍavāśhchaiva kimakurvata sañjaya\n",
+    "word_meanings": "Dhritarashtra said: O Sanjaya, what did my sons and the sons of Pandu do when they gathered on the holy field of Kurukshetra, eager for battle?",
+    "commentaries": [
+      {
+        "author_name": "Aadi Shankaracharya",
+        "text": "The commentary text for Aadi Shankaracharya for Verse 1, Chapter 1."
+      },
+      {
+        "author_name": "Original Transliteration",
+        "text": "dhṛitarāśhtra uvācha dharma-kṣhetre kuru-kṣhetre samavetā yuyutsavaḥ māmakāḥ pāṇḍavāśhchaiva kimakurvata sañjaya"
+      }
+    ]
+  }
+]

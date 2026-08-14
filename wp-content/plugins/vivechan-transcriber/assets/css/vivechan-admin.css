@@ -1,0 +1,107 @@
+/*
+ * Hosts the React app inside wp-admin.
+ *
+ * Two jobs only: reclaim the layout, and win the specificity fight against
+ * core's admin form styles.
+ *
+ * The fight is real. App.css styles controls with `.vw-input` / `.vw-select`
+ * (specificity 0,0,1,0), while wp-admin uses `input[type="text"]` and `select`
+ * (0,0,1,1 / 0,0,0,1). Core therefore wins on padding, border, radius, height
+ * and box-shadow, which is why the controls render flat and cramped in admin
+ * but correct on the front end. The rules below restate the app's own values
+ * at `#vivechan-app .vw-*` (0,1,1,0) so the design comes back.
+ *
+ * Do NOT broaden these to bare `select` / `input`: that outranks App.css
+ * itself, and stripping `background-image` deletes the dropdown arrow that
+ * `.vw-select` draws as an inline SVG.
+ */
+
+/* ── Layout ─────────────────────────────────────────────── */
+
+.vivechan-admin-wrap {
+	margin: 0 0 0 -20px;
+	padding: 0;
+	max-width: none;
+}
+
+/* The app's shell is min-height:100vh, which overshoots by the admin bar. */
+#vivechan-app .vw-shell {
+	min-height: calc(100vh - 32px);
+}
+
+/* Its top bar is position:sticky; top:0, which would slide under the fixed
+   admin bar rather than resting below it. */
+#vivechan-app .vw-topbar {
+	top: 32px;
+}
+
+@media screen and (max-width: 782px) {
+	.vivechan-admin-wrap {
+		margin-left: -10px;
+	}
+
+	/* Below 782px the admin bar is 46px tall and scrolls away with the page. */
+	#vivechan-app .vw-shell {
+		min-height: calc(100vh - 46px);
+	}
+
+	#vivechan-app .vw-topbar {
+		top: 0;
+	}
+}
+
+/* ── Form controls: restate App.css over core admin ─────── */
+
+#vivechan-app .vw-input,
+#vivechan-app .vw-select,
+#vivechan-app .vw-textarea {
+	width: 100%;
+	padding: 10px 14px;
+	font-size: 14px;
+	font-family: var(--font);
+	color: var(--text);
+	background-color: var(--surface);
+	border: 1.5px solid var(--border);
+	border-radius: var(--radius);
+	box-shadow: none;
+	min-height: 0;
+	height: auto;
+	line-height: 1.6;
+	max-width: none;
+}
+
+/* .vw-select paints its own arrow; only the reserved space needs restoring. */
+#vivechan-app .vw-select {
+	padding-right: 36px;
+}
+
+/* The compact chapter select. Needs the id here too: the block above scores
+   0,1,1,0 and would otherwise beat `.vw-chapter-row .vw-select` in App.css. */
+#vivechan-app .vw-chapter-row .vw-select {
+	width: auto;
+	min-width: 0;
+	padding: 6px 34px 6px 10px;
+	font-size: 13px;
+	border-width: 1px;
+	background-position: right 10px center;
+}
+
+#vivechan-app .vw-textarea {
+	min-height: 120px;
+	line-height: 1.7;
+}
+
+/* Core would otherwise win the focus ring too. */
+#vivechan-app .vw-input:focus,
+#vivechan-app .vw-select:focus,
+#vivechan-app .vw-textarea:focus {
+	border-color: var(--primary);
+	box-shadow: 0 0 0 3px rgba(124, 58, 237, .12);
+	outline: none;
+}
+
+#vivechan-app .vw-btn {
+	line-height: normal;
+	height: auto;
+	text-decoration: none;
+}

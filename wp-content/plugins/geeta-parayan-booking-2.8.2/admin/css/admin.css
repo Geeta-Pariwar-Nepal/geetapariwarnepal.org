@@ -1,0 +1,191 @@
+/* =========================================================
+   Geeta Pariwar Nepal — Parayan Booking Admin Styles
+   Theme: Saffron • Maroon • White
+   ========================================================= */
+:root {
+	--gpn-saffron: #F59E0B;
+	--gpn-saffron-dark: #D97706;
+	--gpn-maroon: #7C2D12;
+	--gpn-maroon-dark: #4C1D0A;
+	--gpn-gold: #FBBF24;
+	--gpn-cream: #FFF7ED;
+	--gpn-ink: #2A211C;
+	--gpn-border: #E8DFD3;
+}
+
+.gpn-pb-wrap {
+	max-width: 1400px;
+	padding: 16px 20px 40px;
+	color: var(--gpn-ink);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.gpn-pb-topbar {
+	border-bottom: 3px solid var(--gpn-saffron);
+	padding-bottom: 14px;
+}
+.gpn-pb-logo svg { border-radius: 50%; box-shadow: 0 2px 8px rgba(124,45,18,.35); }
+.gpn-pb-title { margin: 0; font-size: 24px; font-weight: 700; color: var(--gpn-maroon); line-height: 1.2; }
+
+/* ---------- Stat cards ---------- */
+.gpn-pb-stat-card, .gpn-pb-stat-card-sm {
+	border: none; border-radius: 14px;
+	box-shadow: 0 4px 16px rgba(124,45,18,.10);
+	transition: transform .18s ease, box-shadow .18s ease;
+	background: #fff;
+}
+.gpn-pb-stat-card:hover { transform: translateY(-3px); box-shadow: 0 8px 22px rgba(124,45,18,.16); }
+.gpn-stat-icon {
+	width: 52px; height: 52px; border-radius: 12px;
+	display: flex; align-items: center; justify-content: center;
+	flex: 0 0 52px;
+}
+.gpn-stat-icon .dashicons { color: #fff; font-size: 26px; width: 26px; height: 26px; }
+.gpn-stat-value { font-size: 26px; font-weight: 800; color: var(--gpn-maroon); line-height: 1.1; }
+.gpn-stat-label { font-size: 12px; color: #8a7a6e; text-transform: uppercase; letter-spacing: .4px; }
+.gpn-stat-card-sm .gpn-stat-value { font-size: 22px; }
+
+.gpn-bg-saffron { background: linear-gradient(135deg, #F59E0B, #FBBF24); }
+.gpn-bg-saffron-dark { background: linear-gradient(135deg, #D97706, #F59E0B); }
+.gpn-bg-maroon { background: linear-gradient(135deg, #7C2D12, #9A3412); }
+.gpn-bg-maroon-dark { background: linear-gradient(135deg, #4C1D0A, #7C2D12); }
+.gpn-bg-gold { background: linear-gradient(135deg, #B45309, #D97706); }
+
+/* ---------- Panels ---------- */
+.gpn-pb-panel {
+	border: 1px solid var(--gpn-border);
+	border-radius: 14px;
+	overflow: hidden;
+	box-shadow: 0 2px 10px rgba(124,45,18,.06);
+	background: #fff;
+}
+.gpn-pb-panel .card-header {
+	background: linear-gradient(90deg, #FFF7ED, #FFF);
+	border-bottom: 1px solid var(--gpn-border);
+	color: var(--gpn-maroon);
+	font-weight: 700;
+}
+.gpn-pb-filter { border: 1px dashed #D9C6B0; background: #FFFCF6; }
+
+/* ---------- Table ---------- */
+.gpn-pb-table th {
+	background: var(--gpn-maroon);
+	color: #fff;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	white-space: nowrap;
+}
+.gpn-pb-table tbody tr { transition: background .15s; }
+.gpn-pb-table tbody tr:hover { background: #FFF7ED; }
+.gpn-pb-actions .btn { border-radius: 6px; }
+
+/* ---------- Legend ---------- */
+.gpn-legend { font-size: 12px; color: #6b5d52; }
+.gpn-dot { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin: 0 4px 0 10px; vertical-align: middle; }
+.gpn-dot-saffron, .gpn-dot-available { background: #22C55E; }
+.gpn-dot-maroon, .gpn-dot-booked { background: #DC2626; }
+.gpn-dot-waiting { background: #EAB308; }
+.gpn-dot-closed { background: #9CA3AF; }
+
+/* ---------- Chapter cards (admin matrix) ---------- */
+.gpn-chapter-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 12px; }
+.gpn-chapter-card {
+	border-radius: 12px; padding: 12px; text-align: center;
+	border: 2px solid transparent; cursor: pointer; position: relative;
+	transition: transform .15s, box-shadow .15s;
+	background: #fff;
+}
+.gpn-chapter-card:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(0,0,0,.12); }
+.gpn-chapter-card .gpn-ch-num { font-size: 22px; font-weight: 800; }
+.gpn-chapter-card .gpn-ch-label { font-size: 12px; }
+.gpn-chapter-card.gpn-available { border-color: #22C55E; }
+.gpn-chapter-card.gpn-available .gpn-ch-num { color: #16A34A; }
+.gpn-chapter-card.gpn-booked { border-color: #DC2626; background: #FEF2F2; }
+.gpn-chapter-card.gpn-booked .gpn-ch-num { color: #DC2626; }
+.gpn-chapter-card.gpn-waiting { border-color: #EAB308; background: #FEFCE8; }
+.gpn-chapter-card.gpn-waiting .gpn-ch-num { color: #A16207; }
+.gpn-chapter-card.gpn-closed { border-color: #CBD5E1; background: #F1F5F9; color: #64748B; }
+.gpn-chapter-card .gpn-ch-count { position: absolute; top: 6px; right: 8px; font-size: 11px; font-weight: 700; }
+
+/* ---------- Template textarea ---------- */
+.gpn-tpl-body { font-family: Consolas, Monaco, monospace; font-size: 13px; }
+
+/* ---------- Pagination ---------- */
+.gpn-pb-pagination .page-link { color: var(--gpn-maroon); }
+.gpn-pb-pagination .page-item.active .page-link { background: var(--gpn-maroon); border-color: var(--gpn-maroon); }
+
+/* ---------- Audit ---------- */
+.gpn-pb-audit-list .list-group-item { padding-left: 16px; border-left: 3px solid transparent; }
+.gpn-pb-audit-list .list-group-item:hover { border-left-color: var(--gpn-saffron); }
+
+/* ---------- Dark mode ---------- */
+.gpn-pb-dark,
+.gpn-pb-dark .card,
+.gpn-pb-dark .gpn-pb-panel,
+.gpn-pb-dark .gpn-pb-stat-card,
+.gpn-pb-dark .gpn-pb-stat-card-sm {
+	background: #221813;
+	border-color: #3a2b22;
+}
+.gpn-pb-dark { color: #EDE4D8; }
+.gpn-pb-dark .gpn-pb-title,
+.gpn-pb-dark .gpn-pb-panel .card-header { color: #FBBF24; }
+.gpn-pb-dark .gpn-pb-panel .card-header { background: #2a1f17; border-color: #3a2b22; }
+.gpn-pb-dark .gpn-pb-table th { background: #4C1D0A; }
+.gpn-pb-dark .gpn-pb-table tbody tr:hover { background: #2c2118; }
+.gpn-pb-dark .gpn-pb-filter { background: #251b14; }
+.gpn-pb-dark .gpn-stat-value { color: #FBBF24; }
+.gpn-pb-dark .text-muted { color: #b6a596 !important; }
+.gpn-pb-dark .table { --bs-table-bg: transparent; color: #EDE4D8; }
+.gpn-pb-dark .form-control, .gpn-pb-dark .form-select { background: #2a1f17; color: #EDE4D8; border-color: #4a3a2e; }
+.gpn-pb-dark .modal-content { background: #221813; color: #EDE4D8; }
+.gpn-pb-dark .modal-header { border-color: #3a2b22; }
+.gpn-pb-dark .list-group-item { background: transparent; color: #EDE4D8; }
+.gpn-pb-dark .alert-light { background: #2a1f17; color: #EDE4D8; border-color: #3a2b22; }
+.gpn-pb-dark .gpn-chapter-card { background: #2a1f17; }
+.gpn-pb-dark .gpn-chapter-card.gpn-closed { background: #2b2620; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+	.gpn-pb-wrap { padding: 10px 8px 30px; }
+	.gpn-pb-title { font-size: 19px; }
+	.gpn-stat-value { font-size: 20px; }
+	.gpn-pb-actions .btn { padding: 4px 6px; }
+}
+
+/* ---------- Calendar & History ---------- */
+.gpn-cal-head {
+	background: var(--gpn-maroon);
+	color: #fff;
+	text-align: center;
+	font-weight: 700;
+	border-radius: 6px;
+	padding: 6px 0;
+	margin-bottom: 6px;
+}
+.gpn-cal-cell {
+	border: 1px solid var(--gpn-border);
+	border-radius: 8px;
+	min-height: 118px;
+	padding: 6px;
+	margin: 4px;
+	background: #fff;
+	display: inline-block;
+	vertical-align: top;
+	width: calc(14.285% - 8px);
+	overflow: hidden;
+}
+.gpn-cal-empty { background: #faf7f3; border-style: dashed; }
+.gpn-cal-today { outline: 2px solid var(--gpn-saffron); }
+.gpn-cal-past { opacity: .72; background: #f7f3ee; }
+.gpn-cal-slot { margin-top: 4px; }
+.gpn-cal-bookings { list-style: none; margin: 4px 0 0; padding: 0; max-height: 78px; overflow-y: auto; }
+.gpn-cal-booking { font-size: 12px; padding: 1px 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.gpn-cal-b-confirmed .badge, .gpn-cal-b-approved .badge { background: #15803d; }
+.gpn-cal-b-pending .badge { background: #b45309; }
+.gpn-cal-b-waiting .badge { background: #a16207; }
+.gpn-cal-b-rejected .badge, .gpn-cal-b-cancelled .badge, .gpn-cal-b-blocked .badge { background: #7f1d1d; }
+.gpn-pb-dark .gpn-cal-cell { background: #2a211c; border-color: #4a3a30; }
+.gpn-pb-dark .gpn-cal-empty, .gpn-pb-dark .gpn-cal-past { background: #352a24; }
+.gpn-pb-dark .gpn-cal-booking em { color: #d9c3a8; }

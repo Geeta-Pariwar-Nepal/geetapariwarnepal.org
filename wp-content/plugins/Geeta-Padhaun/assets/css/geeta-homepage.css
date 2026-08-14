@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&display=swap');
+
+.geeta-homepage {
+    background: #f6f8fb;
+    color: #1f2937;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.geeta-homepage__hero,
+.geeta-homepage__content {
+    padding: 24px 16px;
+}
+
+.geeta-homepage__wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.geeta-homepage__hero {
+    background: linear-gradient(135deg, #eef4ff, #f8f4ff);
+    border-bottom: 1px solid #dde7f5;
+    padding-top: 28px;
+    padding-bottom: 20px;
+}
+
+.geeta-homepage__intro {
+    text-align: center;
+}
+
+.geeta-homepage__eyebrow {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: #4338ca;
+    margin: 0 0 4px;
+}
+
+.geeta-homepage__intro h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+    color: #0f172a;
+}
+
+.geeta-header-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 16px;
+    margin-top: 16px;
+    align-items: stretch;
+}
+
+.geeta-header-box {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+    padding: 14px 16px;
+}
+
+.geeta-header-label {
+    font-size: 0.8rem;
+    font-weight: 700;
+    margin: 0 0 8px;
+    color: #334155;
+    letter-spacing: 0.02em;
+}
+
+.geeta-pdf-strip {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.geeta-pdf-chip {
+    display: inline-block;
+    padding: 4px 10px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid #c7d2fe;
+    border-radius: 6px;
+    background: #eef2ff;
+    color: #4338ca !important;
+    text-decoration: none !important;
+    transition: all 0.12s;
+}
+
+.geeta-pdf-chip:hover {
+    background: #c7d2fe;
+    border-color: #818cf8;
+    color: #1e1b4b !important;
+}
+
+.geeta-header-box .geeta-homepage__controls {
+    margin: 0;
+    max-width: 100%;
+}
+
+.geeta-homepage__controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.geeta-control-group label {
+    display: block;
+    font-weight: 600;
+    font-size: 0.8rem;
+    margin-bottom: 4px;
+    color: #475569;
+}
+
+.geeta-control-group select {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    background: #fff;
+    cursor: pointer;
+    transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.geeta-control-group select:focus {
+    border-color: #4338ca;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(67, 56, 202, 0.12);
+}
+
+.geeta-card {
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+    padding: 18px 20px;
+}
+
+.geeta-card h2 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin: 0 0 10px;
+    color: #1e293b;
+    letter-spacing: 0.01em;
+}
+
+.geeta-homepage__grid {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 20px;
+}
+
+.geeta-homepage__main,
+.geeta-homepage__sidebar {
+    display: grid;
+    gap: 16px;
+    align-content: start;
+}
+
+.geeta-verse-nav {
+    display: grid;
+    grid-template-columns: 110px 1fr 110px;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.geeta-nav-btn {
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: #334155;
+}
+
+.geeta-nav-btn:hover:not(:disabled) {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+    color: #0f172a;
+}
+
+.geeta-nav-btn:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+#geeta-current-ref {
+    text-align: center;
+    font-size: 0.92rem;
+    font-weight: 600;
+    color: #334155;
+}
+
+.geeta-verse-note {
+    font-size: 0.82rem;
+    color: #b45309;
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.geeta-sanskrit-text {
+    font-size: 1.5rem;
+    line-height: 2;
+    text-align: center;
+    padding: 6px 0 0;
+    color: #0f172a;
+    font-weight: 500;
+    font-family: 'Noto Sans Devanagari', 'Sanskrit Text', 'Nirmala UI', serif;
+}
+
+.geeta-toggle-btn {
+    display: block;
+    margin: 12px auto 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 8px 18px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    background: #fff;
+    color: #4338ca;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.geeta-toggle-btn:hover {
+    background: #eef4ff;
+    border-color: #4338ca;
+}
+
+.geeta-chanting-img {
+    display: block;
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 12px auto 0;
+    border-radius: 10px;
+}
+
+.geeta-toggle-row {
+    display: none;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.geeta-toggle-row.is-visible {
+    display: flex;
+}
+
+.geeta-toggle-row .geeta-toggle-btn {
+    margin: 0;
+}
+
+.geeta-tv-btn.is-active {
+    background: #dc2626;
+    color: #fff;
+    border-color: #dc2626;
+    animation: geeta-tv-pulse 2s infinite;
+}
+
+.geeta-tv-btn.is-active:hover {
+    background: #b91c1c;
+    border-color: #b91c1c;
+}
+
+@keyframes geeta-tv-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4); }
+    50% { box-shadow: 0 0 0 8px rgba(220, 38, 38, 0); }
+}
+
+.geeta-tv-mode {
+    background: #0f172a;
+    overflow: hidden;
+}
+
+.geeta-tv-mode .geeta-homepage__hero,
+.geeta-tv-mode .geeta-homepage__sidebar,
+.geeta-tv-mode .geeta-card:not(#geeta-verse-card),
+.geeta-tv-mode .geeta-homepage__controls {
+    display: none;
+}
+
+.geeta-tv-mode .geeta-homepage__content {
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.geeta-tv-mode .geeta-homepage__grid {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+}
+
+.geeta-tv-mode .geeta-homepage__main {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 100%;
+    padding: 10px;
+}
+
+.geeta-tv-mode #geeta-verse-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+    gap: 8px;
+    max-width: 100%;
+}
+
+.geeta-tv-mode .geeta-chanting-img {
+    max-width: 100%;
+    max-height: 65vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    cursor: none;
+    border-radius: 8px;
+}
+
+.geeta-tv-mode .geeta-verse-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 90vw;
+    font-size: 1rem;
+    color: #94a3b8;
+    gap: 12px;
+}
+
+.geeta-tv-mode .geeta-nav-btn {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #e2e8f0;
+    border-radius: 12px;
+    min-width: 120px;
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+}
+
+.geeta-tv-mode .geeta-nav-btn:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.geeta-tv-mode .geeta-nav-btn:disabled {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.geeta-tv-mode .geeta-sanskrit-text {
+    font-size: 1.8rem;
+    text-align: center;
+    color: #e2e8f0;
+    max-width: 90vw;
+    line-height: 1.5;
+    padding: 4px 0;
+}
+
+.geeta-tv-mode .geeta-richtext {
+    color: #cbd5e1;
+    text-align: center;
+    max-width: 90vw;
+}
+
+.geeta-tv-mode #geeta-transliteration,
+.geeta-tv-mode #geeta-meaning,
+.geeta-tv-mode #geeta-commentary,
+.geeta-tv-mode #geeta-vivechans,
+.geeta-tv-mode #geeta-chapter-meta {
+    display: none;
+}
+
+.geeta-tv-mode .geeta-verse-note {
+    color: #fbbf24;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.geeta-tv-mode .geeta-toggle-row {
+    display: none !important;
+}
+
+.geeta-verse-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3px;
+}
+
+.geeta-verse-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+    height: 22px;
+    padding: 0 4px;
+    border: 1px solid #cbd5e1;
+    border-radius: 4px;
+    background: #f1f5f9;
+    font-size: 0.65rem;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transition: all 0.1s;
+    color: #334155;
+    text-decoration: none;
+}
+
+.geeta-verse-pill:hover {
+    background: #e2e8f0;
+    border-color: #94a3b8;
+}
+
+.geeta-verse-pill.is-active {
+    background: #4338ca;
+    border-color: #4338ca;
+    color: #fff;
+}
+
+.geeta-richtext {
+    line-height: 1.8;
+    font-size: 0.95rem;
+    color: #1e293b;
+}
+
+.geeta-vivechan {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    padding: 14px 16px;
+    background: #fafbff;
+}
+
+.geeta-vivechan + .geeta-vivechan {
+    margin-top: 10px;
+}
+
+.geeta-vivechan h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin: 0 0 3px;
+    color: #1e293b;
+}
+
+.geeta-vivechan__date,
+.geeta-commentator,
+.geeta-empty {
+    color: #64748b;
+    font-size: 0.85rem;
+}
+
+.geeta-vivechan__date {
+    margin: 0 0 8px;
+}
+
+.geeta-commentator {
+    font-weight: 600;
+    margin: 0 0 4px;
+}
+
+.geeta-empty {
+    font-style: italic;
+}
+
+.geeta-card a {
+    color: #4338ca;
+    text-decoration: underline;
+}
+
+.geeta-card a:hover {
+    color: #312e81;
+}
+
+#geeta-chapter-meta p {
+    margin: 0 0 6px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.geeta-sidebar-btn {
+    width: 100%;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    background: #fff;
+    cursor: pointer;
+    transition: all 0.15s;
+    color: #334155;
+    text-align: left;
+}
+
+.geeta-sidebar-btn:hover {
+    background: #f1f5f9;
+    border-color: #94a3b8;
+}
+
+.geeta-sidebar-images {
+    margin-top: 10px;
+}
+
+.geeta-sidebar-images img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+.geeta-protected-img {
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-drag: none;
+    -webkit-touch-callout: none;
+}
+
+@media (max-width: 960px) {
+    .geeta-homepage__hero {
+        padding-top: 20px;
+        padding-bottom: 16px;
+    }
+
+    .geeta-homepage__intro h1 {
+        font-size: 1.25rem;
+    }
+
+    .geeta-header-row {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .geeta-homepage__controls {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .geeta-homepage__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .geeta-homepage__sidebar {
+        order: 2;
+    }
+
+    .geeta-homepage__main {
+        order: 1;
+    }
+
+    .geeta-verse-nav {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #geeta-current-ref {
+        grid-column: 1 / -1;
+        order: -1;
+    }
+
+    .geeta-sanskrit-text {
+        font-size: 1.1rem;
+    }
+
+    .geeta-card {
+        padding: 14px 16px;
+    }
+
+    .geeta-verse-pill {
+        min-width: 34px;
+        height: 32px;
+        font-size: 0.78rem;
+    }
+
+    .geeta-pdf-chip {
+        font-size: 0.7rem;
+        padding: 3px 8px;
+    }
+}
